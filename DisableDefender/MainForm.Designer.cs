@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.disableButton = new System.Windows.Forms.Button();
+            this.xdaLink = new System.Windows.Forms.LinkLabel();
+            this.enableButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 65);
+            this.label1.Size = new System.Drawing.Size(371, 65);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -78,12 +80,37 @@
             this.disableButton.TabIndex = 3;
             this.disableButton.Text = "Disable";
             this.disableButton.UseVisualStyleBackColor = true;
+            this.disableButton.Click += new System.EventHandler(this.disableButton_Click);
+            // 
+            // xdaLink
+            // 
+            this.xdaLink.AutoSize = true;
+            this.xdaLink.Location = new System.Drawing.Point(15, 87);
+            this.xdaLink.Name = "xdaLink";
+            this.xdaLink.Size = new System.Drawing.Size(167, 13);
+            this.xdaLink.TabIndex = 4;
+            this.xdaLink.TabStop = true;
+            this.xdaLink.Text = "XDA Thread. Created by jessenic.";
+            this.xdaLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.xdaLink_LinkClicked);
+            // 
+            // enableButton
+            // 
+            this.enableButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.enableButton.Location = new System.Drawing.Point(442, 87);
+            this.enableButton.Name = "enableButton";
+            this.enableButton.Size = new System.Drawing.Size(75, 23);
+            this.enableButton.TabIndex = 5;
+            this.enableButton.Text = "Enable";
+            this.enableButton.UseVisualStyleBackColor = true;
+            this.enableButton.Click += new System.EventHandler(this.disableButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 147);
+            this.Controls.Add(this.enableButton);
+            this.Controls.Add(this.xdaLink);
             this.Controls.Add(this.disableButton);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.label1);
@@ -102,6 +129,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox logoBox;
         private System.Windows.Forms.Button disableButton;
+        private System.Windows.Forms.LinkLabel xdaLink;
+        private System.Windows.Forms.Button enableButton;
     }
 }
 
