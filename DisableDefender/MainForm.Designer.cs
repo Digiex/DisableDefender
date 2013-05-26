@@ -28,20 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.understandBox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.logoBox = new System.Windows.Forms.PictureBox();
+            this.disableButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
+            // 
+            // understandBox
+            // 
+            this.understandBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.understandBox.AutoSize = true;
+            this.understandBox.Location = new System.Drawing.Point(12, 118);
+            this.understandBox.Name = "understandBox";
+            this.understandBox.Size = new System.Drawing.Size(407, 17);
+            this.understandBox.TabIndex = 0;
+            this.understandBox.Text = "I understand that disabling Windows Defender might affect the security of this PC" +
+    "";
+            this.understandBox.UseVisualStyleBackColor = true;
+            this.understandBox.CheckedChanged += new System.EventHandler(this.understandBox_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(343, 65);
+            this.label1.TabIndex = 1;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
+            // logoBox
+            // 
+            this.logoBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoBox.Location = new System.Drawing.Point(486, 12);
+            this.logoBox.Name = "logoBox";
+            this.logoBox.Size = new System.Drawing.Size(32, 32);
+            this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoBox.TabIndex = 2;
+            this.logoBox.TabStop = false;
+            // 
+            // disableButton
+            // 
+            this.disableButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.disableButton.Enabled = false;
+            this.disableButton.Location = new System.Drawing.Point(442, 112);
+            this.disableButton.Name = "disableButton";
+            this.disableButton.Size = new System.Drawing.Size(75, 23);
+            this.disableButton.TabIndex = 3;
+            this.disableButton.Text = "Disable";
+            this.disableButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(530, 147);
+            this.Controls.Add(this.disableButton);
+            this.Controls.Add(this.logoBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.understandBox);
             this.Name = "MainForm";
             this.Text = "Disable Windows Defender";
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.CheckBox understandBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox logoBox;
+        private System.Windows.Forms.Button disableButton;
     }
 }
 

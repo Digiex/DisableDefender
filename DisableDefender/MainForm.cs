@@ -19,8 +19,14 @@ namespace DisableDefender
             try
             {
                 this.Icon = Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location);
+                this.logoBox.Image = this.Icon.ToBitmap();
             }
             catch (Exception) { }
+        }
+
+        private void understandBox_CheckedChanged(object sender, EventArgs e)
+        {
+            disableButton.Enabled = understandBox.Checked;
         }
     }
 }
